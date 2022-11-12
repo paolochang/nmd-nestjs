@@ -29,8 +29,9 @@ export class MoviesService {
     this.movies = this.movies.filter((movie) => movie.id !== +id);
   }
 
-  updateMovie(id: number, movieData) {
-    this.getMovie(id);
-    const movieIndex = this.movies.findIndex((movie) => movie.id === id);
+  updateMovie(id: number, movieData: Movie) {
+    const movieIndex = this.movies.findIndex((movie: Movie) => movie.id == id);
+    this.movies[movieIndex] = { ...this.movies[movieIndex], ...movieData };
+    return this.movies[movieIndex];
   }
 }
