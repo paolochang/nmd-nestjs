@@ -1,3 +1,4 @@
+import { CreateMovieDto } from './dto/create-movie.dto';
 import {
   Body,
   Controller,
@@ -31,7 +32,7 @@ export class MoviesController {
   }
 
   @Post()
-  createMovie(@Body() movieData) {
+  createMovie(@Body() movieData: CreateMovieDto) {
     return this.moviesService.createMovie(movieData);
   }
 

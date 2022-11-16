@@ -2,6 +2,12 @@
 
 Learn NestJS with TypeScript to build Enterprise API application
 
+## Validation Pipe
+
+- **whitelist**: `Data Transfer Object`에 정의되어 있는 값만 사용되고 정의되지 않은 값을 제외된다.
+- **forbidNonWhitelisted**: `Data Transfer Object`에 정의되어 있지 않은 값이 넘겨질 경우 `HttpException`을 넘긴다.
+- **transform**: 네트워크를 통해 들어오는 `payload`는 일반 JavaScript 객체인 반면, `ValidationPipe`를 통해 들어오는 `payload`는 `Data Transfer Object` 클래스에 따라 유형이 지정된 객체로 자동 변환할 수 있다.
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
